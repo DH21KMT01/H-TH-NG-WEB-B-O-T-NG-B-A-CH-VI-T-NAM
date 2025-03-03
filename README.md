@@ -180,3 +180,24 @@ if __name__ == "__main__":
     threading.Thread(target=open_browser).start()  
     uvicorn.run(app, host="127.0.0.1", port=8080)
 
+                                                ------FastAPI----------
+from fastapi import FastAPI
+import uvicorn
+import webbrowser
+import threading
+import time
+
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Chào mừng đến với Bảo Tàng Bùa Chú Việt Nam!"}
+def open_browser():
+    time.sleep(1)  # Chờ server khởi động xong
+    webbrowser.open("http://127.0.0.1:8080")  # Mở trình duyệt vào địa chỉ server
+
+if __name__ == "__main__":
+    threading.Thread(target=open_browser).start()  # Chạy open_browser() trong luồng riêng
+    uvicorn.run(app, host="127.0.0.1", port=8080)
+
