@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour Bảo Tàng - Bảo Tàng Bùa Chú</title>
+  <link rel="stylesheet" href="css/style.css">
+  <button onclick="history.back()" style="padding: 8px 12px; background: #3498db; color: white; border: none; border-radius: 4px;">
+    🔙 Quay lại
+</button>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Bảo Tàng Bùa Chú</a>
+    </div>
+  </nav>
+
+  <header class="text-center py-5 bg-light">
+    <h1>Tour Tham Quan</h1>
+  </header>
+
+  <section class="container my-5">
+    <div class="row">
+      <!-- Tour 1 -->
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5 class="card-title">Khám phá Bảo Tàng Bùa Chú</h5>
+          <p class="card-text">Tour tham quan toàn bộ bảo tàng, tìm hiểu lịch sử các loại bùa.</p>
+          <form action="dat_ve.php" method="POST">
+            <input type="hidden" name="id_tour" value="1">
+            <label>Số lượng vé:</label>
+            <input type="number" name="so_luong" value="1" min="1" class="form-control mb-2">
+            <button class="btn btn-success">Đặt Vé</button>
+          </form>
+        </div>
+      </div>
+      <!-- Tour 2 -->
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5 class="card-title">Hành trình Tâm Linh</h5>
+          <p class="card-text">Tour đặc biệt cho những ai muốn trải nghiệm tâm linh.</p>
+          <form action="dat_ve.php" method="POST">
+            <input type="hidden" name="id_tour" value="2">
+            <label>Số lượng vé:</label>
+            <input type="number" name="so_luong" value="1" min="1" class="form-control mb-2">
+            <button class="btn btn-success">Đặt Vé</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-5">
+    <p class="text-center">© 2025 Bảo Tàng Bùa Chú VN</p>
+  </footer>
+</body>
+</html>
